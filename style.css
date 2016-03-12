@@ -1,0 +1,407 @@
+body {
+    background-color: #37474F;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif-light, sans-serif;
+    overflow-x: hidden;
+}
+
+#MenuButton {
+    width: 12vw;
+    height: 12vw;
+    fill: #90CAF9;
+    position: fixed;
+    top: 4vw;
+    left: 4vw;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#Header {
+    width: 100vw;
+    height: 20vw;
+    background-color: #263238;
+    text-align: center;
+}
+
+#Logo {
+    width: 12vw;
+    height: 12vw;
+    fill: #A5D6A7;
+    margin: 10vw 0 0 0;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#Title {
+    color: #A5D6A7;
+    font-size: 8vw;
+    position: relative;
+    top: -9vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+}
+
+#LogoutButton {
+    display: none;
+}
+
+#LogoutButton svg {
+    position: fixed;
+    top: 6vw;
+    right: 6vw;
+    width: 8vw;
+    height: 8vw;
+    fill: #E57373;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#BackButton svg {
+    position: fixed;
+    top: 6vw;
+    left: 6vw;
+    width: 8vw;
+    height: 8vw;
+    fill: #81C784;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Frame {
+    position: absolute;
+    top: 20vw;
+    width: 100vw;
+    background-color: #37474F;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+}
+
+.SubFrame {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    background-color: #37474F;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+}
+
+#MainFrame {
+    visibility: visible;
+    opacity: 1;
+}
+
+h1 {
+    margin: 5vw 0 5vw 0;
+    padding: 0;
+    font-size: 8vw;
+    font-weight: 600;
+    text-align: center;
+    color: #A5D6A7;
+}
+
+h2 {
+    margin: 5vw 0 0 0;
+    padding: 0;
+    font-size: 6.5vw;
+    font-weight: 600;
+    text-align: center;
+    color: #A5D6A7;
+}
+
+h3 {
+    margin: 0 0 -4vw 0;
+    padding: 0;
+    font-size: 4.5vw;
+    font-weight: 600;
+    text-align: center;
+    color: #A5D6A7;
+}
+
+h4 {
+    margin: 1vw 0 5vw 0;
+    padding: 0;
+    font-size: 3.5vw;
+    font-weight: 600;
+    text-align: center;
+    color: #81C784;
+}
+
+#PortalFrame h3 {
+    margin: 0 0 0 0;
+    color: #81C784;
+}
+
+.IconButton svg {
+    padding: 2vw 4vw 2vw 4vw;
+    display: block;
+    margin: 2vw 2vw 6vw 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: 38vw;
+    height: 38vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.IconButton .Base {
+    fill: #546E7A;
+}
+
+.IconButton .Icon {
+    fill: #81C784;
+}
+
+.IconButton .Text {
+    font-family: "Segoe UI", sans-serif-light, sans-serif;
+    font-size: 9px;
+    fill: #E8F5E9;
+}
+
+input {
+    background: none;
+    border-bottom: 1vw solid #607D8B;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    outline: none;
+    padding: 4vw;
+    color: #A5D6A7;
+    margin: 2vw;
+    width: 64vw;
+    font-size: 5vw;
+}
+
+label {
+    font-family: "Segoe UI", sans-serif-light, sans-serif;
+    font-size: 5vw;
+    display: block;
+    width: 64vw;
+    margin: -4vw 0 0 50vw;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    position: relative;
+    top: 11.5vw;
+    left: 0;
+    color: #81C784;
+    font-weight: 400;
+    cursor: text;
+    text-align: left;
+}
+
+.Button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 2vw 4vw 2vw 4vw;
+    margin: 9vw 4vw 4vw 4vw;
+    background-color: #546E7A;
+    color: #A5D6A7;
+    border-radius: 2vw;
+    outline: none;
+    box-sizing: border-box;
+    border: 0.2vw solid #607D8B;
+}
+
+.Button:focus {
+    border: 0.1vh solid #81C784;
+}
+
+hr {
+    border: 0.1vh solid #455A64;
+    margin: 2vh;
+}
+
+#SearchFrame h2 {
+    color: #81C784;
+    margin-bottom: 5vw;
+}
+
+#SearchFrame span {
+    color: #A5D6A7;
+}
+
+.SearchResult {
+    margin: 2vw;
+    padding: 2vw;
+    background-color: #546E7A;
+    text-align: left;
+    border-radius: 1vw;
+}
+
+.SearchResult span {
+    font-size: 5vw;
+    display: block;
+}
+
+.SearchResult .Capacity {
+    float: right;
+    margin-top: -6vw;
+}
+
+.SearchResult .Type {
+    font-size: 4vw;
+}
+
+.AddRemoveButton {
+    width: 20vw;
+    margin: 3vw;
+}
+
+#BusID {
+    margin-bottom: 4vw;
+}
+
+#BreakLine {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+
+
+    #BreakLine {
+        display: block;
+    }
+
+    .AddRemoveButton {
+        width: 10vh;
+        margin: 1.5vh;
+    }
+
+    #LogoutButton svg {
+        position: fixed;
+        top: 3vh;
+        right: 3vw;
+        width: 4vh;
+        height: 4vh;
+    }
+
+
+    #BackButton svg {
+        top: 3vh;
+        left: 3vh;
+        width: 4vh;
+        height: 4vh;
+    }
+
+    #Logo {
+        width: 6vh;
+        height: 6vh;
+        margin: 5vh 0 0 0;
+    }
+
+    #MenuButton {
+        width: 6vh;
+        height: 6vh;
+        top: 2vh;
+        left: 2vh;
+    }
+
+    #Header {
+        width: 100vw;
+        height: 10vh;
+    }
+
+    #Title {
+        font-size: 4vh;
+        top: -4.5vh;
+    }
+
+    h1 {
+        margin: 2.5vh 0 2.5vh 0;
+        font-size: 4vh;
+    }
+
+    h2 {
+        margin: 2.5vh 0 0 0;
+        font-size: 3.25vh;
+    }
+
+    h3 {
+        margin: 0 0 -2vh 0;
+        font-size: 2.25vh;
+    }
+
+    h4 {
+        margin: 0.5vh 0 2.5vh 0;
+        font-size: 1.75vh;
+    }
+
+    .IconButton svg {
+        display: inline;
+        padding: 1vh 2vh 1vh 2vh;
+        margin: 1vh 1vh 3vh 1vh;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        width: 32vh;
+        height: 32vh;
+    }
+
+    #ButtonContainer {
+        text-align: center;
+    }
+
+    .Frame {
+        top: 10vh;
+    }
+
+
+    input {
+        padding: 2vh;
+        margin: 1vh;
+        width: 32vh;
+        font-size: 2.5vh;
+        border-bottom: 1vh solid #607D8B;
+    }
+
+    label {
+        font-size: 2.5vh;
+        width: 32vh;
+        margin: -2vh 0 0 50vw;
+        top: 5.75vh;
+    }
+
+    .Button {
+        width: 30vw;
+        display: block;
+        padding: 1vh 2vh 1vh 2vh;
+        margin: 4.5vh 2vh 2vh 50vw;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        border-radius: 1vh;
+        border: 0.1vh solid #607D8B;
+    }
+
+}

@@ -1,0 +1,1 @@
+SELECT * FROM users WHERE EMail='divinemamgai@gmail.com' AND Password='e2fc714c4727ee9395f324cd2e7f331f'

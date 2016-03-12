@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Distance Matrix service</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo2zIgcjZFtaxiY-JxtschUxRJfBhYKLY"></script>
+    <style>
+        #right-panel {
+            font-family: 'Roboto','sans-serif';
+            line-height: 30px;
+            padding-left: 10px;
+        }
+
+        #right-panel select, #right-panel input {
+            font-size: 15px;
+        }
+
+        #right-panel select {
+            width: 100%;
+        }
+
+        #right-panel i {
+            font-size: 12px;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100%;
+            width: 50%;
+        }
+        #right-panel {
+            float: right;
+            width: 48%;
+            padding-left: 2%;
+        }
+        #output {
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+<div id="right-panel">
+    <div id="output"></div>
+</div>
+<div id="map"></div>
+<script>
+    var Source = 'USA';
+    var Destination = 'Ambala,India';
+    function initMap(Src,Dst) {
+        var Source = Src;
+        var Destination = Dst;
+        var service = new google.maps.DistanceMatrixService;
+        service.getDistanceMatrix({
+            origins: [Source],
+            destinations: [Destination],
+            travelMode: google.maps.TravelMode.DRIVING,
+            unitSystem: google.maps.UnitSystem.METRIC,
+            avoidHighways: false,
+            avoidTolls: false
+        }, function(response, status) {
+            if (status !== google.maps.DistanceMatrixStatus.OK) {
+                alert('Error was: ' + status);
+            } else {
+                var originList = response.originAddresses;
+                var destinationList = response.destinationAddresses;
+                var outputDiv = document.getElementById('output');
+                outputDiv.innerHTML = '';
+                var results = response.rows[0].elements;
+                if(isNaN(results[0].distance) == 0)
+                {
+                    alert(originList[0] + ' to ' + destinationList[0] + ': ' + results[0].distance.text);
+                } else {
+                    alert("The Route is not possible by Driving.")
+                }
+            }
+        });
+    }
+    initMap(Source,Destination);
+</script>
+</body>
+</html>
